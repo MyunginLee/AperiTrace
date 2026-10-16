@@ -1,0 +1,156 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "composition": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Composition",
+      "type": "string"
+    },
+    "coordinate_setting": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Coordinate Setting",
+      "type": "string"
+    },
+    "doi_or_repository_id": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Doi Or Repository Id",
+      "type": "string"
+    },
+    "internal_dimension": {
+      "const": 2,
+      "title": "Internal Dimension",
+      "type": "integer"
+    },
+    "known_limitations": {
+      "items": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Known Limitations",
+      "type": "array"
+    },
+    "length_units": {
+      "enum": [
+        "angstrom",
+        "nanometre"
+      ],
+      "title": "Length Units",
+      "type": "string"
+    },
+    "license_or_terms": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "License Or Terms",
+      "type": "string"
+    },
+    "material_name": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Material Name",
+      "type": "string"
+    },
+    "model_kind": {
+      "const": "decagonal_5d_track_a",
+      "title": "Model Kind",
+      "type": "string"
+    },
+    "physical_dimension": {
+      "const": 3,
+      "title": "Physical Dimension",
+      "type": "integer"
+    },
+    "reciprocal_units": {
+      "enum": [
+        "radians_per_angstrom",
+        "cycles_per_angstrom",
+        "radians_per_nanometre",
+        "cycles_per_nanometre"
+      ],
+      "title": "Reciprocal Units",
+      "type": "string"
+    },
+    "retrieval_date": {
+      "format": "date",
+      "title": "Retrieval Date",
+      "type": "string"
+    },
+    "source_authors": {
+      "items": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Source Authors",
+      "type": "array"
+    },
+    "source_file_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source File Sha256",
+      "type": "string"
+    },
+    "source_origin": {
+      "enum": [
+        "user_supplied",
+        "authoritative_repository",
+        "primary_paper_transcription"
+      ],
+      "title": "Source Origin",
+      "type": "string"
+    },
+    "source_title": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Source Title",
+      "type": "string"
+    },
+    "source_year": {
+      "maximum": 9999,
+      "minimum": 1800,
+      "title": "Source Year",
+      "type": "integer"
+    },
+    "superspace_dimension": {
+      "const": 5,
+      "title": "Superspace Dimension",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "material_name",
+    "composition",
+    "model_kind",
+    "source_title",
+    "source_authors",
+    "source_year",
+    "doi_or_repository_id",
+    "retrieval_date",
+    "license_or_terms",
+    "source_file_sha256",
+    "superspace_dimension",
+    "physical_dimension",
+    "internal_dimension",
+    "coordinate_setting",
+    "length_units",
+    "reciprocal_units",
+    "known_limitations",
+    "source_origin"
+  ],
+  "title": "Provenance",
+  "type": "object"
+}

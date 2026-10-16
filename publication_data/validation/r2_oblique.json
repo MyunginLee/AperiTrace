@@ -1,0 +1,87 @@
+{
+  "case": "r2_oblique",
+  "candidate_count": 571,
+  "original_probe_count": 171,
+  "original_unresolved": 95,
+  "unresolved_decomposition": {
+    "adjacent_no_interior": 20,
+    "representable_interior": 75
+  },
+  "original_candidate_disagreements": 99,
+  "unresolved_structural_same_kind_adjacent_roots": 45,
+  "unresolved_midpoint_equals_endpoint": 20,
+  "unresolved_parameter_length_sum": 2.1566082253343666e-14,
+  "unresolved_union_measure": 2.1566082253343666e-14,
+  "structural_classes": 160,
+  "structural_float_split_classes": 79,
+  "expanded_query_count": 757,
+  "uncertain_queries": 486,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 2.1350739701203132e-16,
+  "absolute_normalized_intensity_max_abs": 5.204170427930421e-17,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 19,
+      "missed_count": 2,
+      "missed_ids": [
+        "-1,0,0,2,0",
+        "0,-1,1,0,1"
+      ],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2700600568409326,
+        0.5046972651989636,
+        0.5944218107935314,
+        0.8151741848575602
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 19,
+      "missed_count": 1,
+      "missed_ids": [
+        "0,-1,1,0,1"
+      ],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2700600568409326,
+        0.5046972651989636,
+        0.5944218107935314,
+        0.8151741848575602
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 19,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2700600568409326,
+        0.5046972651989636,
+        0.5944218107935314,
+        0.8151741848575602
+      ]
+    }
+  ],
+  "tier_b": {
+    "construction": "independent algebraic square roots; decimal path literals; 80/100 digits",
+    "probe_count": 757,
+    "candidate_differences_all": 398,
+    "candidate_differences_clear": 0,
+    "precision_80_100_candidate_differences": 0,
+    "frozen_float_tier_a_candidate_differences": 126,
+    "endpoint_max_abs": 8.049116928532385e-16,
+    "hull_vertices": 10,
+    "P_perp_e_float_residual": [
+      -1.1102230246251565e-16,
+      1.6653345369377348e-16
+    ],
+    "P_perp_e_decimal_residual": [
+      "0E-80",
+      "0E-80"
+    ]
+  }
+}

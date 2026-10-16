@@ -1,0 +1,217 @@
+{
+  "$defs": {
+    "ModelConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "boundary_epsilon_relative": {
+          "default": 1e-10,
+          "maximum": 1000000,
+          "minimum": 0,
+          "title": "Boundary Epsilon Relative",
+          "type": "number"
+        },
+        "boundary_policy": {
+          "default": "exclude",
+          "enum": [
+            "exclude",
+            "include"
+          ],
+          "title": "Boundary Policy",
+          "type": "string"
+        },
+        "chunk_size": {
+          "default": 65536,
+          "maximum": 1000000,
+          "minimum": 1,
+          "title": "Chunk Size",
+          "type": "integer"
+        },
+        "index_bound": {
+          "default": 7,
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "Index Bound",
+          "type": "integer"
+        },
+        "initial_phi": {
+          "default": [
+            0,
+            0
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            },
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            }
+          ],
+          "title": "Initial Phi",
+          "type": "array"
+        },
+        "max_candidates": {
+          "default": 2000000,
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Max Candidates",
+          "type": "integer"
+        },
+        "model_name": {
+          "const": "canonical_decagonal_3plus2",
+          "default": "canonical_decagonal_3plus2",
+          "title": "Model Name",
+          "type": "string"
+        },
+        "phason_domain": {
+          "$ref": "#/$defs/PhasonDomain"
+        },
+        "physical_crop": {
+          "$ref": "#/$defs/PhysicalCrop"
+        },
+        "physical_scale": {
+          "$ref": "#/$defs/PhysicalScale"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "title": "ModelConfig",
+      "type": "object"
+    },
+    "PhasonDomain": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "box",
+          "default": "box",
+          "title": "Kind",
+          "type": "string"
+        },
+        "max": {
+          "default": [
+            0.25,
+            0.25
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            },
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            }
+          ],
+          "title": "Max",
+          "type": "array"
+        },
+        "min": {
+          "default": [
+            -0.25,
+            -0.25
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            },
+            {
+              "maximum": 1000000,
+              "minimum": -1000000,
+              "type": "number"
+            }
+          ],
+          "title": "Min",
+          "type": "array"
+        }
+      },
+      "title": "PhasonDomain",
+      "type": "object"
+    },
+    "PhysicalCrop": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "default": "cylinder",
+          "enum": [
+            "cylinder",
+            "sphere"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "radial_max": {
+          "default": 10,
+          "exclusiveMinimum": 0,
+          "maximum": 1000000,
+          "title": "Radial Max",
+          "type": "number"
+        },
+        "z_abs_max": {
+          "default": 3,
+          "exclusiveMinimum": 0,
+          "maximum": 1000000,
+          "title": "Z Abs Max",
+          "type": "number"
+        }
+      },
+      "title": "PhysicalCrop",
+      "type": "object"
+    },
+    "PhysicalScale": {
+      "additionalProperties": false,
+      "properties": {
+        "xy": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 1000000,
+          "title": "Xy",
+          "type": "number"
+        },
+        "z": {
+          "default": 0.35,
+          "exclusiveMinimum": 0,
+          "maximum": 1000000,
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "title": "PhysicalScale",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "parameters": {
+      "$ref": "#/$defs/ModelConfig"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "parameters"
+  ],
+  "title": "ModelConfiguration",
+  "type": "object"
+}

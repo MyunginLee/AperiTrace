@@ -1,0 +1,65 @@
+{
+  "case": "r4_horizontal",
+  "candidate_count": 2131,
+  "original_probe_count": 453,
+  "original_unresolved": 310,
+  "unresolved_decomposition": {
+    "adjacent_no_interior": 67,
+    "representable_interior": 243
+  },
+  "original_candidate_disagreements": 313,
+  "unresolved_structural_same_kind_adjacent_roots": 115,
+  "unresolved_midpoint_equals_endpoint": 67,
+  "unresolved_parameter_length_sum": 6.116461503946624e-14,
+  "unresolved_union_measure": 6.116461503946624e-14,
+  "structural_classes": 610,
+  "structural_float_split_classes": 260,
+  "expanded_query_count": 1610,
+  "uncertain_queries": 1272,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 1.6310194386810737e-16,
+  "absolute_normalized_intensity_max_abs": 1.1275702593849246e-17,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 42,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641794,
+        0.5407118611906001,
+        0.6419953377670142,
+        0.8145499926698477,
+        0.921194634316807
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 42,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641794,
+        0.5407118611906001,
+        0.6419953377670142,
+        0.8145499926698477,
+        0.921194634316807
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 42,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641794,
+        0.5407118611906001,
+        0.6419953377670142,
+        0.8145499926698477,
+        0.921194634316807
+      ]
+    }
+  ],
+  "tier_b": null
+}

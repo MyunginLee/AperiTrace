@@ -1,0 +1,5 @@
+{
+  "name": "XRSuperspace.Runtime",
+  "rootNamespace": "XRSuperspace",
+  "references": ["XRSuperspace.Core", "Unity.InputSystem", "Unity.XR.CoreUtils", "Unity.XR.Interaction.Toolkit", "Unity.XR.Hands", "Unity.XR.Management", "Unity.ugui", "Unity.RenderPipelines.Universal.Runtime"]
+}

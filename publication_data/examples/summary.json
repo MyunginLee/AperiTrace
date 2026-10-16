@@ -1,0 +1,114 @@
+{
+  "gate": "PASS",
+  "example_a": [
+    {
+      "label": "before",
+      "N": 11,
+      "status": "clear_float64",
+      "count_normalized_amplitude_error": 0.0,
+      "absolute_normalized_intensity_error": 0.0,
+      "unity_amplitude_error": 0.0,
+      "capture_verified": {
+        "selected": 11,
+        "boundary": 10,
+        "edges": 10,
+        "journal_frames": 1,
+        "diffraction_samples": 381,
+        "max_abs_errors": {
+          "real": 0.0,
+          "imag": 0.0,
+          "raw": 0.0,
+          "normalized": 0.0
+        },
+        "state_sha256": "23b350e4b822af9393344fe337d66836f7735980d6fc98b772beafd79a6d5e9f",
+        "image_sha256": "99a5a08525c02ad35d6662426ff150af55da7436b883bc87cd64f965dc1e10b1",
+        "sidecar_sha256": "d70a6eaf9c8aa04a0611c90b3e5d95041ec64d0b470530d96def9d450587e9ae",
+        "resolution": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "N": 15,
+      "status": "clear_float64",
+      "count_normalized_amplitude_error": 0.0,
+      "absolute_normalized_intensity_error": 0.0,
+      "unity_amplitude_error": 0.0,
+      "capture_verified": {
+        "selected": 15,
+        "boundary": 0,
+        "edges": 18,
+        "journal_frames": 2,
+        "diffraction_samples": 381,
+        "max_abs_errors": {
+          "real": 0.0,
+          "imag": 0.0,
+          "raw": 0.0,
+          "normalized": 0.0
+        },
+        "state_sha256": "d06d9e506b78c87914641ae3455443294d80ce871bb49c45123c71337e083f76",
+        "image_sha256": "04cf3beeee3938c1e30d3c5ddc1ab51bdc30784eaa9c40e8d57048a4dd8c5c08",
+        "sidecar_sha256": "81e0b00d0416050644fa587288eb51c8d5c8b424d928008a65bdcca0cc47d230",
+        "resolution": [
+          1920,
+          1080
+        ]
+      }
+    }
+  ],
+  "example_b": {
+    "focus": [
+      0,
+      -1,
+      1,
+      0,
+      1
+    ],
+    "lower": 0.06943535403044591,
+    "upper": 0.07871887221281355,
+    "parameters": [
+      0.0625,
+      0.07407711312162973,
+      0.09375
+    ],
+    "states": [
+      {
+        "N": 126,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      },
+      {
+        "N": 126,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      },
+      {
+        "N": 126,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      }
+    ],
+    "trace_query_count": 164,
+    "fixed_q": [
+      [
+        1.6,
+        0.0,
+        0.0
+      ],
+      [
+        1.6,
+        0.0,
+        1.0
+      ]
+    ],
+    "scope": "full-trajectory diffraction; other IDs may change between states; single-point contribution stored separately"
+  },
+  "unity_event_runtime": false,
+  "unity_capture": "Recorded desktop panels; numerical state independently rechecked",
+  "python_viewer_callbacks_tested": true
+}

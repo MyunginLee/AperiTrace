@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70a9da96a90a2d44abb414d067f01cb, type: 3}
+  m_Name: GpuLabSettings
+  m_EditorClassIdentifier: XRSuperspace.Runtime::XRSuperspace.LabSettings
+  Datasets:
+  - canonical_small_v1/canonical.qc5d
+  - modelset_small/modelset_small.qc5d
+  - modelset_medium/modelset_medium.qc5d
+  MaximumInteractiveCandidates: 20000
+  MaximumRenderedEdges: 2048
+  PhysicalFitRadius: 0.65
+  InternalFitScale: 0.55
+  PointRadius: 0.018
+  SelectedColor: {r: 0.15, g: 0.85, b: 0.75, a: 1}
+  RejectedColor: {r: 0.22, g: 0.28, b: 0.36, a: 1}
+  BoundaryColor: {r: 1, g: 0.65, b: 0.1, a: 1}

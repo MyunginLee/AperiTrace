@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "model": {
+    "schema_version": "1.0.0",
+    "parameters": {
+      "schema_version": "1.0",
+      "index_bound": 1,
+      "physical_crop": {"kind": "cylinder", "radial_max": 0.9, "z_abs_max": 0.9}
+    }
+  },
+  "phasons": [[0.0, 0.0], [0.181, 0.047], [-0.119, 0.047], [0.0, 0.0]],
+  "q_vectors": [[0.0, 0.0, 0.0], [1.0, 2.0, 0.0], [-1.0, -2.0, 0.0],
+                [3.0, 1.0, 0.0], [-3.0, -1.0, 0.0], [0.0, 0.0, 2.0], [0.0, 0.0, -2.0]],
+  "runtime": {
+    "schema_version": "1.0.0",
+    "coordinate_atol": 1e-6,
+    "boundary_distance_atol": 1e-6,
+    "preview_boundary_epsilon": 1e-6,
+    "internal_uv_scale": 1.0
+  }
+}

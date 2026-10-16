@@ -1,0 +1,88 @@
+{
+  "case": "r6_diagonal",
+  "candidate_count": 4871,
+  "original_probe_count": 1064,
+  "original_unresolved": 802,
+  "unresolved_decomposition": {
+    "adjacent_no_interior": 191,
+    "representable_interior": 611
+  },
+  "original_candidate_disagreements": 944,
+  "unresolved_structural_same_kind_adjacent_roots": 280,
+  "unresolved_midpoint_equals_endpoint": 191,
+  "unresolved_parameter_length_sum": 2.034483828150871e-13,
+  "unresolved_union_measure": 2.034483828150871e-13,
+  "structural_classes": 1410,
+  "structural_float_split_classes": 637,
+  "expanded_query_count": 3436,
+  "uncertain_queries": 2979,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 1.1172767106889286e-16,
+  "absolute_normalized_intensity_max_abs": 6.5052130349130266e-18,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 188,
+      "missed_count": 12,
+      "missed_ids": [
+        "-3,-1,0,1,0",
+        "-3,0,2,3,-1",
+        "-2,0,1,2,1",
+        "-1,-4,-1,1,2",
+        "-1,-3,1,3,1",
+        "0,-3,0,2,3",
+        "0,-1,-2,1,2",
+        "0,2,3,-1,-3",
+        "2,1,0,-2,-2",
+        "2,2,-2,-2,1",
+        "3,-3,-4,-1,2",
+        "4,-2,-3,0,3"
+      ],
+      "width_quantiles": [
+        0.00378273725363798,
+        0.26172929137890477,
+        0.49942748835388406,
+        0.6529372621461396,
+        0.9391676864552336
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 188,
+      "missed_count": 7,
+      "missed_ids": [
+        "-3,0,2,3,-1",
+        "-1,-4,-1,1,2",
+        "0,-3,0,2,3",
+        "0,-1,-2,1,2",
+        "2,2,-2,-2,1",
+        "3,-3,-4,-1,2",
+        "4,-2,-3,0,3"
+      ],
+      "width_quantiles": [
+        0.00378273725363798,
+        0.26172929137890477,
+        0.49942748835388406,
+        0.6529372621461396,
+        0.9391676864552336
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 188,
+      "missed_count": 1,
+      "missed_ids": [
+        "2,2,-2,-2,1"
+      ],
+      "width_quantiles": [
+        0.00378273725363798,
+        0.26172929137890477,
+        0.49942748835388406,
+        0.6529372621461396,
+        0.9391676864552336
+      ]
+    }
+  ],
+  "tier_b": null
+}

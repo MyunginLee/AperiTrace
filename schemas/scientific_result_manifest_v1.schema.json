@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "OutputRecord": {
+      "additionalProperties": false,
+      "description": "An output's portable project-relative path, byte count, and exact checksum.",
+      "properties": {
+        "path": {
+          "description": "Project-relative POSIX path; '.' and '..' segments are forbidden.",
+          "not": {
+            "pattern": "(^|/)\\.\\.?(/|$)"
+          },
+          "pattern": "^[^/\\\\:\\x00-\\x1f]+(?:/[^/\\\\:\\x00-\\x1f]+)*$",
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 0,
+          "title": "Size Bytes",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes"
+      ],
+      "title": "OutputRecord",
+      "type": "object"
+    },
+    "PlatformRecord": {
+      "additionalProperties": false,
+      "description": "Public environment identifiers, excluding user names and absolute paths.",
+      "properties": {
+        "machine": {
+          "minLength": 1,
+          "title": "Machine",
+          "type": "string"
+        },
+        "python_version": {
+          "minLength": 1,
+          "title": "Python Version",
+          "type": "string"
+        },
+        "release": {
+          "minLength": 1,
+          "title": "Release",
+          "type": "string"
+        },
+        "system": {
+          "minLength": 1,
+          "title": "System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "system",
+        "release",
+        "machine",
+        "python_version"
+      ],
+      "title": "PlatformRecord",
+      "type": "object"
+    },
+    "ResultManifest": {
+      "additionalProperties": false,
+      "description": "Version 1 provenance contract. Null revision explicitly means no Git revision.",
+      "properties": {
+        "code_revision": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Code Revision"
+        },
+        "command": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Command",
+          "type": "array"
+        },
+        "config_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Config Hash",
+          "type": "string"
+        },
+        "outputs": {
+          "items": {
+            "$ref": "#/$defs/OutputRecord"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "platform": {
+          "$ref": "#/$defs/PlatformRecord"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Hash",
+          "type": "string"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "command",
+        "config_hash",
+        "source_hash",
+        "code_revision",
+        "platform",
+        "timestamp",
+        "outputs"
+      ],
+      "title": "ResultManifest",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "provenance": {
+      "$ref": "#/$defs/ResultManifest"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "provenance"
+  ],
+  "title": "ScientificResultManifest",
+  "type": "object"
+}

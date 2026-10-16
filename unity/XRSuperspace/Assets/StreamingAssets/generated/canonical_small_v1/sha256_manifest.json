@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "path": "authoritative.npz",
+      "sha256": "e488c800a8dfdd109e498ae93f5d2c677f083f7c868b8fee67cb0271937a3a3b",
+      "size_bytes": 31024
+    },
+    {
+      "path": "basis.json",
+      "sha256": "955ff383409a71039956cc4a45f683281d2735793b921dbcd9df0280ac4f4804",
+      "size_bytes": 801
+    },
+    {
+      "path": "canonical.qc5d",
+      "sha256": "2942d45e5d6bb1c171c2cbf535943217a4c4a7e5c3355a1fa9828af5ec2dd2e8",
+      "size_bytes": 2298
+    },
+    {
+      "path": "config_input.json",
+      "sha256": "7802a05d0dbaef2ffe9cd24af7edece930428d1dd6c4f6beb5e8eb4719eb8e72",
+      "size_bytes": 655
+    },
+    {
+      "path": "diffraction.json",
+      "sha256": "669cfa7c5835f58f4134dab71141e7a2f701c98bfd5ea1821f07b3164b6aa9eb",
+      "size_bytes": 2390
+    },
+    {
+      "path": "expected_phasons.json",
+      "sha256": "51b5f6d0ef7d03d6a7400a8f4e95f3a243e99b016f40683228b880f4da64b765",
+      "size_bytes": 2811
+    },
+    {
+      "path": "graph.json",
+      "sha256": "5afc2c40c2bd3cb6e86d70f6ee1124e1344cfee97306b1366a6a979f27f9edd9",
+      "size_bytes": 566
+    },
+    {
+      "path": "loss_report.json",
+      "sha256": "ee767d644378a1696cd55a20c1c9566da60bf12bafd4d938acc5a12bcc55f1bd",
+      "size_bytes": 1618
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "fd419ec990be779ad0f9837aa8bc132d5405aec8b75c01041b503bce6e72c434",
+      "size_bytes": 16448
+    },
+    {
+      "path": "window.json",
+      "sha256": "70fbb1bd048ffc19b1e4b5a729193ef1419763f0cf831522bfd7a4307faf026c",
+      "size_bytes": 864
+    }
+  ],
+  "schema_version": "1.0.0"
+}

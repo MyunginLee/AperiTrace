@@ -1,0 +1,64 @@
+{
+  "case": "r4_short",
+  "candidate_count": 2131,
+  "original_probe_count": 98,
+  "original_unresolved": 65,
+  "unresolved_decomposition": {
+    "representable_interior": 65
+  },
+  "original_candidate_disagreements": 69,
+  "unresolved_structural_same_kind_adjacent_roots": 24,
+  "unresolved_midpoint_equals_endpoint": 0,
+  "unresolved_parameter_length_sum": 9.243300569394819e-14,
+  "unresolved_union_measure": 9.243300569394819e-14,
+  "structural_classes": 610,
+  "structural_float_split_classes": 281,
+  "expanded_query_count": 580,
+  "uncertain_queries": 352,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 9.961729419575574e-17,
+  "absolute_normalized_intensity_max_abs": 4.7704895589362195e-18,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    }
+  ],
+  "tier_b": null
+}

@@ -1,0 +1,9 @@
+{
+  "name": "XRSuperspace.EditMode",
+  "rootNamespace": "XRSuperspace.Tests",
+  "includePlatforms": ["Editor"],
+  "references": ["XRSuperspace.Core", "XRSuperspace.Runtime", "XRSuperspace.Editor", "Unity.InputSystem", "Unity.XR.Hands", "Unity.XR.Interaction.Toolkit", "Unity.XR.Management", "Unity.XR.Management.Editor", "Unity.XR.OpenXR", "Unity.XR.OpenXR.Editor", "Unity.RenderPipelines.Universal.Runtime", "Unity.ugui"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll", "Newtonsoft.Json.dll"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

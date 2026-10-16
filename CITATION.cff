@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite AperiTrace if you use this software."
+type: software
+title: "AperiTrace: Event-resolved membership analysis and finite diffraction for cut-and-project models"
+version: "0.1.0"
+authors:
+  - family-names: Lee
+    given-names: Myungin
+    email: myungin@umd.edu
+    affiliation: "College of Computer, Mathematical, and Natural Sciences, University of Maryland, College Park, MD, USA"
+license: MIT
+abstract: >-
+  AperiTrace is implemented as the Python package qc5d.
+  Linked Python inspection retains exact five-integer lattice identity across
+  physical projection, linear-offset selection history, finite diffraction,
+  and independently recomputable exports in a canonical finite decagonal model.
+keywords:
+  - cut-and-project
+  - quasicrystals
+  - finite diffraction
+  - scientific software
+# repository-code: "<TODO>"
+# repository-artifact: "<TODO>"
+# url: "<TODO>"

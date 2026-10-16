@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d6c44fdb1dbce44b2e6e1aa4b95255, type: 3}
+  m_Name: DemoSettings
+  m_EditorClassIdentifier: XRSuperspace.Runtime::XRSuperspace.DemoSettings
+  StartGuided: 1
+  StageSeconds: 6
+  SampleSeconds: 0.15
+  FocusId: -1,0,-1,0,0
+  Background: {r: 0.035, g: 0.04, b: 0.045, a: 1}
+  Selected: {r: 0.15, g: 0.8, b: 0.7, a: 1}
+  Boundary: {r: 1, g: 0.65, b: 0.1, a: 1}
+  Rejected: {r: 0.35, g: 0.38, b: 0.42, a: 1}
+  AccessibleSelected: {r: 0.1, g: 0.55, b: 1, a: 1}
+  AccessibleBoundary: {r: 1, g: 0.6, b: 0.05, a: 1}
+  AccessibleRejected: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Captures:
+  - {fileID: 11400000, guid: 19b620c72edf4b24f9028d92f9924f22, type: 2}
+  - {fileID: 11400000, guid: 87c672cd763993b4db257f01e014e820, type: 2}
+  - {fileID: 11400000, guid: 8da30e3daf658e44d9f5b65b7ea08fdc, type: 2}
+  - {fileID: 11400000, guid: 473cb399e5e95cb44ba7b7f37bfd628e, type: 2}
+  - {fileID: 11400000, guid: 743adc6857a379343ba43b884c88513c, type: 2}
+  - {fileID: 11400000, guid: aa6f13bac79350745afd2e5338879baf, type: 2}
+  - {fileID: 11400000, guid: 6bacc0511dde5a345bf882bde8189664, type: 2}
+  - {fileID: 11400000, guid: 4fe018ed549a4154096fac5df5494256, type: 2}
+  - {fileID: 11400000, guid: 6596372298cfc9d45905e802e8a10913, type: 2}
+  - {fileID: 11400000, guid: 5ac2b355f5ba4c747b7d83df03858169, type: 2}
+  - {fileID: 11400000, guid: 617f752baa915c345b8803c21270f12f, type: 2}

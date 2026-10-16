@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "ArrayDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "dtype": {
+          "enum": [
+            "<i4",
+            "<u4",
+            "<u8",
+            "<f8",
+            "<c16",
+            "|b1",
+            "|i1",
+            "|u1",
+            "<U59"
+          ],
+          "title": "Dtype",
+          "type": "string"
+        },
+        "path": {
+          "pattern": "^[^/\\\\:\\x00-\\x1f]+(?:/[^/\\\\:\\x00-\\x1f]+)*$",
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "shape": {
+          "items": {
+            "maximum": 2000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Shape",
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "dtype",
+        "shape",
+        "sha256"
+      ],
+      "title": "ArrayDescriptor",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundary_count": {
+      "maximum": 2000000,
+      "minimum": 0,
+      "title": "Boundary Count",
+      "type": "integer"
+    },
+    "boundary_epsilon": {
+      "maximum": 1000000,
+      "minimum": 0,
+      "title": "Boundary Epsilon",
+      "type": "number"
+    },
+    "boundary_policy": {
+      "enum": [
+        "exclude",
+        "include"
+      ],
+      "title": "Boundary Policy",
+      "type": "string"
+    },
+    "datasets": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ArrayDescriptor"
+      },
+      "title": "Datasets",
+      "type": "object"
+    },
+    "phi": {
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+        {
+          "maximum": 1000000,
+          "minimum": -1000000,
+          "type": "number"
+        },
+        {
+          "maximum": 1000000,
+          "minimum": -1000000,
+          "type": "number"
+        }
+      ],
+      "title": "Phi",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected_count": {
+      "maximum": 2000000,
+      "minimum": 0,
+      "title": "Selected Count",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "phi",
+    "selected_count",
+    "boundary_count",
+    "boundary_epsilon",
+    "boundary_policy",
+    "datasets"
+  ],
+  "title": "SelectedState",
+  "type": "object"
+}

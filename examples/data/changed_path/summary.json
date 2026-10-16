@@ -1,0 +1,126 @@
+{
+  "schema": "qc5d-path-recovery/1",
+  "sample_count": 33,
+  "candidate_count": 571,
+  "baseline_path": {
+    "start": [
+      -0.61,
+      0.43
+    ],
+    "end": [
+      0.67,
+      -0.31
+    ]
+  },
+  "changed_path": {
+    "start": [
+      -0.6,
+      0.45
+    ],
+    "end": [
+      0.66,
+      -0.27
+    ]
+  },
+  "new_interval_object": true,
+  "same_phase_cache_object": true,
+  "q": [
+    [
+      1.6,
+      0,
+      0
+    ],
+    [
+      1.6,
+      0,
+      1
+    ]
+  ],
+  "missed_ids": [
+    "-1,1,0,0,-2",
+    "0,2,1,1,-1"
+  ],
+  "meaning": "Illustrative canonical path edit; exact tuple identity, float64 intervals, not a material discovery or an isolated-site diffraction attribution",
+  "outcome": "RECOVERED_CLEAR_FLOAT64_INTERVAL",
+  "focus": [
+    -1,
+    1,
+    0,
+    0,
+    -2
+  ],
+  "focus_selected_at_changed_samples": 0,
+  "focus_selected_at_baseline_samples": 7,
+  "lower": 0.8222154361321617,
+  "upper": 0.826024193676834,
+  "midpoint": 0.8241198149044979,
+  "states": [
+    {
+      "name": "before",
+      "parameter": 0.8125,
+      "phi": [
+        0.42374999999999996,
+        -0.13499999999999995
+      ],
+      "focus_selected": false,
+      "N": 123,
+      "I_normalized": [
+        0.02756640649983375,
+        0.011701605095873197
+      ],
+      "status": "clear_float64",
+      "direct_recompute": {
+        "N": 123,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      }
+    },
+    {
+      "name": "inside",
+      "parameter": 0.8241198149044979,
+      "phi": [
+        0.4383909667796674,
+        -0.14336626673123848
+      ],
+      "focus_selected": true,
+      "N": 125,
+      "I_normalized": [
+        0.023176916443348905,
+        0.009627310437727483
+      ],
+      "status": "clear_float64",
+      "direct_recompute": {
+        "N": 125,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      }
+    },
+    {
+      "name": "after",
+      "parameter": 0.84375,
+      "phi": [
+        0.4631250000000001,
+        -0.15749999999999992
+      ],
+      "focus_selected": false,
+      "N": 123,
+      "I_normalized": [
+        0.022199331222934743,
+        0.009572035794592204
+      ],
+      "status": "clear_float64",
+      "direct_recompute": {
+        "N": 123,
+        "status": "clear_float64",
+        "count_normalized_amplitude_error": 0.0,
+        "absolute_normalized_intensity_error": 0.0
+      }
+    }
+  ],
+  "inside_minus_before_intensity": [
+    -0.004389490056484844,
+    -0.002074294658145714
+  ]
+}

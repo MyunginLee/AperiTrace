@@ -1,0 +1,415 @@
+{
+  "authoritative_sha256": "29c3aa54d9cf6de2f807d8e444a71a4fb811533096804ed1c4751213197c9d00",
+  "file_name": "authoritative.npz",
+  "metadata": {
+    "basis": {
+      "P_parallel": [
+        [
+          0.6324555320336759,
+          0.19543950758485482,
+          -0.5116672736016927,
+          -0.5116672736016927,
+          0.19543950758485468
+        ],
+        [
+          0.0,
+          0.6015009550075456,
+          0.37174803446018456,
+          -0.37174803446018445,
+          -0.6015009550075457
+        ],
+        [
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579
+        ]
+      ],
+      "P_perp": [
+        [
+          0.6324555320336759,
+          -0.5116672736016927,
+          0.19543950758485468,
+          0.19543950758485498,
+          -0.511667273601693
+        ],
+        [
+          0.0,
+          0.37174803446018456,
+          -0.6015009550075457,
+          0.6015009550075456,
+          -0.3717480344601843
+        ]
+      ],
+      "kind": "canonical_c5_real_dft",
+      "schema_version": "1.0.0"
+    },
+    "candidates": {
+      "count": 10813,
+      "datasets": {
+        "candidate_bool": {
+          "dtype": "|b1",
+          "path": "points/candidate_bool",
+          "sha256": "b56d000ec06b11b8219bba79fcff32da8a396b72f4ba97301e4a8fdeea436906",
+          "shape": [
+            10813
+          ]
+        },
+        "internal_uv_float64": {
+          "dtype": "<f8",
+          "path": "points/internal_uv_float64",
+          "sha256": "2a5c02c99ce365fed4ae1afda89c55e9e60032e31455c2bd5033728e3be24680",
+          "shape": [
+            10813,
+            2
+          ]
+        },
+        "lattice_n_int32": {
+          "dtype": "<i4",
+          "path": "points/lattice_n_int32",
+          "sha256": "f428376aa5eb7a221597ac5f298f6b494b67a6238fc57b3ce6dde0b7e71c9799",
+          "shape": [
+            10813,
+            5
+          ]
+        },
+        "lookup_hash_uint64": {
+          "dtype": "<u8",
+          "path": "points/lookup_hash_uint64",
+          "sha256": "f3693fadba5f3e68617a1ea4a0bd2e1b33dfc63b7b26846fd2a512b1101e0618",
+          "shape": [
+            10813
+          ]
+        },
+        "physical_xyz_float64": {
+          "dtype": "<f8",
+          "path": "points/physical_xyz_float64",
+          "sha256": "f9e583a098be7d2c5c1f2ad00a84881fd9ca25eab13daf21b17114e98a9715a1",
+          "shape": [
+            10813,
+            3
+          ]
+        },
+        "stable_id": {
+          "dtype": "<U59",
+          "path": "points/stable_id",
+          "sha256": "b3367affad50d0dd25dfdcc7158eeffcd1d1656dd3c203b497fbb5f991778a4a",
+          "shape": [
+            10813
+          ]
+        }
+      },
+      "order": "tuple_lexicographic",
+      "schema_version": "1.0.0"
+    },
+    "code_revision": null,
+    "config_hash": "c654b015f49560f9958f0632f1630f44869c5f80b473992077bd1ecdaaeaa650",
+    "coordinate_units": "dimensionless",
+    "dependency_versions": {
+      "numpy": "2.5.3",
+      "pydantic": "2.13.5",
+      "scipy": "1.18.1"
+    },
+    "diffraction": null,
+    "graph": {
+      "datasets": {
+        "endpoints_uint32": {
+          "dtype": "<u4",
+          "path": "graph/endpoints_uint32",
+          "sha256": "4ddc1311d0b6f68d5b7976e6e0fd6c9c60b6f81f26b1ea5675c0c3503863a7de",
+          "shape": [
+            14380,
+            2
+          ]
+        },
+        "generator": {
+          "dtype": "|i1",
+          "path": "graph/generator",
+          "sha256": "769dade21e235b17943cd690de850ff1b67d7f47d3998bdf121e92588996fb71",
+          "shape": [
+            14380
+          ]
+        },
+        "sign": {
+          "dtype": "|i1",
+          "path": "graph/sign",
+          "sha256": "3cc19c9bdf4c17f7a493c655a63a57e1648b0228f1ec0fe29a0e6f6c8a103420",
+          "shape": [
+            14380
+          ]
+        }
+      },
+      "edge_count": 14380,
+      "endpoints": "candidate_row_indices",
+      "orientation": "positive_generator_once",
+      "schema_version": "1.0.0"
+    },
+    "input_checksums": {
+      "stage2_modelset": "94cc397ad369979a014ab477f3d1db86837fc7f9649f72bfdffbfae48771397f"
+    },
+    "kind": "authoritative_canonical_modelset",
+    "material": {
+      "kind": "canonical_model",
+      "license_or_access_terms": null,
+      "name": "idealized canonical decagonal model set",
+      "published_parameters": {},
+      "references": [],
+      "retrieval_date": null,
+      "schema_version": "1.0.0",
+      "source_sha256": null,
+      "source_url": null,
+      "units": "dimensionless"
+    },
+    "model": {
+      "parameters": {
+        "boundary_epsilon_relative": 1e-10,
+        "boundary_policy": "exclude",
+        "chunk_size": 65536,
+        "index_bound": 7,
+        "initial_phi": [
+          0.0,
+          0.0
+        ],
+        "max_candidates": 2000000,
+        "model_name": "canonical_decagonal_3plus2",
+        "phason_domain": {
+          "kind": "box",
+          "max": [
+            0.25,
+            0.25
+          ],
+          "min": [
+            -0.25,
+            -0.25
+          ]
+        },
+        "physical_crop": {
+          "kind": "cylinder",
+          "radial_max": 10.0,
+          "z_abs_max": 3.0
+        },
+        "physical_scale": {
+          "xy": 1.0,
+          "z": 0.35
+        },
+        "schema_version": "1.0"
+      },
+      "schema_version": "1.0.0"
+    },
+    "phason_convention": "u=P_perp*n+phi",
+    "phason_frames": [],
+    "q_units": "radians_per_model_length",
+    "schema_version": "1.0.0",
+    "scientific_coordinates_unscaled": true,
+    "source_files": [
+      {
+        "path": "src/qc5d/__init__.py",
+        "sha256": "d98008f4e7ecd95fe0542ceabfec4f6c5d98538ad55862e7edf8b5ce64643f27"
+      },
+      {
+        "path": "src/qc5d/__main__.py",
+        "sha256": "2d7d00d8697413e2e49ddb809165d750b388066b4fc518101e2b2d01b05507f4"
+      },
+      {
+        "path": "src/qc5d/authoritative.py",
+        "sha256": "c8abfb843bbce69e731b74d594e0c7fb8c834e54e8f776b6aa3eda2effcbc92d"
+      },
+      {
+        "path": "src/qc5d/basis.py",
+        "sha256": "cf7680fea8fc3098452c49ca1f6a8ea9b50f80159d12d3709699066d2a4c167b"
+      },
+      {
+        "path": "src/qc5d/checksums.py",
+        "sha256": "23c5c95b35639661874b74c8bfdbb467461fc4dce200123c2109d6b5d1ad0401"
+      },
+      {
+        "path": "src/qc5d/cli.py",
+        "sha256": "8a9c682d82011d336045a6c3cc3beb69010744008015aa8e448f1776edc892ee"
+      },
+      {
+        "path": "src/qc5d/config.py",
+        "sha256": "865b7d69bbd9c271783454bc2685ac19d205b257fcfbf539e487fe74c21d6ba0"
+      },
+      {
+        "path": "src/qc5d/data_schema.py",
+        "sha256": "3faf2119f9d6065e09179ce07541341892d89b4072be3eab1687d35eca70818f"
+      },
+      {
+        "path": "src/qc5d/data_workflows.py",
+        "sha256": "25ce7be5dc4bc910f5c8c5e7fec0add805990da8daeeab25b5a75bceb2108652"
+      },
+      {
+        "path": "src/qc5d/diagnostics.py",
+        "sha256": "dd17407df4bf9e2a544f51ac00e35bb3552138d8ec0249f12e80ad650b13ab6c"
+      },
+      {
+        "path": "src/qc5d/diffraction.py",
+        "sha256": "1ef36a9e8325a67c653b3e364bce2459b5e090e7b781ea696105e7f76bd930e2"
+      },
+      {
+        "path": "src/qc5d/diffraction_config.py",
+        "sha256": "00a5e47e84c08d92b87c3a638a3554074457e6536385c1bcb1d2732a390c750d"
+      },
+      {
+        "path": "src/qc5d/geometry.py",
+        "sha256": "88bfa4c90b822a2e93b5d28fff1bb7289898e20336ef870cebd986ce7beea10b"
+      },
+      {
+        "path": "src/qc5d/golden.py",
+        "sha256": "50a3adc57fef65cc26be66a0219e3c1d37f74921f6472ab4db24cb3b0153b714"
+      },
+      {
+        "path": "src/qc5d/graph.py",
+        "sha256": "12fee8f0612c8f31fd88e71c9f55727057c71887b4d3edce86e79411605c50d8"
+      },
+      {
+        "path": "src/qc5d/identity.py",
+        "sha256": "bfb652f97574cffd3f119147f56308e2aa495d2eabde312b457ff5e371d27864"
+      },
+      {
+        "path": "src/qc5d/manifest.py",
+        "sha256": "6953cbee1e267e1d4296bd90a0fecc6a715abf241af35d8fd6619efefcad2fe2"
+      },
+      {
+        "path": "src/qc5d/model_artifacts.py",
+        "sha256": "6d641d8721af7fcfdf959110b45796f12771835c1072d499decb4b5ec0d443aa"
+      },
+      {
+        "path": "src/qc5d/model_config.py",
+        "sha256": "1cf0e24b0cd99126482a672e1ebfd2f65a8326650dc3697eb0b55959344e8bca"
+      },
+      {
+        "path": "src/qc5d/modelset.py",
+        "sha256": "f2b26d5fcd4a006b3e856b06eb6c0665dbb1e8f837a41a98d444f5d363a02dc4"
+      },
+      {
+        "path": "src/qc5d/phason.py",
+        "sha256": "3d09f04a0b386cdd3a78290f0c8f297f9979ba7529cb94aa18fc2d173a112615"
+      },
+      {
+        "path": "src/qc5d/reciprocal.py",
+        "sha256": "5a7d3ff97860002bef79df6827d42f7277f235e4334b5ebc9d6cc0e632e2de20"
+      },
+      {
+        "path": "src/qc5d/reference.py",
+        "sha256": "cd1caf8c020d4498a276826e1c2ebc889eab2b36117772b1e8fb1adb8fb2ca90"
+      },
+      {
+        "path": "src/qc5d/runtime.py",
+        "sha256": "7035a69a08a96c52c3d1f1ea7ba6450ee19f864eaa0d58dd08b03145a8e3dbfd"
+      },
+      {
+        "path": "src/qc5d/safe_npz.py",
+        "sha256": "6d27944a92097ec5748104d07b7d2952f7ebf79142b9356e19e30a0c16b0af49"
+      },
+      {
+        "path": "src/qc5d/science.py",
+        "sha256": "12bbb5ff34c58bf6c752d4ac2325e3a44a226d60aa163f31e18c6f69d42b346a"
+      },
+      {
+        "path": "src/qc5d/science_artifacts.py",
+        "sha256": "2ea96c89ce239b8db89fe988f81f60cae9f21881e409bee8b321ecc42542c4d2"
+      },
+      {
+        "path": "src/qc5d/window.py",
+        "sha256": "2840bb8354e4b7237c5eddbdb4ffd470123cfee442f177757d9afbf6bb5f1a5a"
+      }
+    ],
+    "source_hash": "4ccfdfe6125734d370db8c8e721bf792abe264382ae3f29ad14f20b1d5957447",
+    "state": {
+      "boundary_count": 340,
+      "boundary_epsilon": 1.0233345472033855e-10,
+      "boundary_policy": "exclude",
+      "datasets": {
+        "boundary_bool": {
+          "dtype": "|b1",
+          "path": "points/boundary_bool",
+          "sha256": "1620157c08a8be627a455028c2cb4763b9fc34709ae90ec7ab33aa7efeb1ef4c",
+          "shape": [
+            10813
+          ]
+        },
+        "boundary_distance": {
+          "dtype": "<f8",
+          "path": "points/boundary_distance",
+          "sha256": "ea7a5154eebb253b843b31897513b0992eaa8ae330be3d887fb5efa557016283",
+          "shape": [
+            10813
+          ]
+        },
+        "phi0": {
+          "dtype": "<f8",
+          "path": "state/phi0",
+          "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+          "shape": [
+            2
+          ]
+        },
+        "selected_bool": {
+          "dtype": "|b1",
+          "path": "points/selected_bool",
+          "sha256": "0c1e3699354a2d5cbbabaa3d8a8b4c49d35d04bfea8eb15b82dc3908f92a169d",
+          "shape": [
+            10813
+          ]
+        }
+      },
+      "phi": [
+        0.0,
+        0.0
+      ],
+      "schema_version": "1.0.0",
+      "selected_count": 5483
+    },
+    "window": {
+      "kind": "projected_centered_unit_cube",
+      "order": "ccw_from_lexicographic_minimum",
+      "schema_version": "1.0.0",
+      "signed_distance": "positive_inside_euclidean_edge_segments",
+      "vertices_uv": [
+        [
+          -1.0233345472033855,
+          1.942890293094024e-16
+        ],
+        [
+          -0.8278950396185308,
+          -0.6015009550075455
+        ],
+        [
+          -0.3162277660168382,
+          -0.9732489894677301
+        ],
+        [
+          0.31622776601683766,
+          -0.9732489894677301
+        ],
+        [
+          0.8278950396185306,
+          -0.6015009550075459
+        ],
+        [
+          1.0233345472033855,
+          -1.942890293094024e-16
+        ],
+        [
+          0.8278950396185308,
+          0.6015009550075455
+        ],
+        [
+          0.3162277660168382,
+          0.9732489894677301
+        ],
+        [
+          -0.31622776601683766,
+          0.9732489894677301
+        ],
+        [
+          -0.8278950396185306,
+          0.6015009550075459
+        ]
+      ]
+    }
+  },
+  "schema_version": "1.0.0"
+}

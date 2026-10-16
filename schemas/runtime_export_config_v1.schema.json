@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundary_distance_atol": {
+      "default": 0.000001,
+      "exclusiveMinimum": 0,
+      "maximum": 0.000001,
+      "title": "Boundary Distance Atol",
+      "type": "number"
+    },
+    "coordinate_atol": {
+      "default": 0.000001,
+      "exclusiveMinimum": 0,
+      "maximum": 0.000001,
+      "title": "Coordinate Atol",
+      "type": "number"
+    },
+    "internal_uv_scale": {
+      "default": 1,
+      "exclusiveMinimum": 0,
+      "maximum": 1000000,
+      "title": "Internal Uv Scale",
+      "type": "number"
+    },
+    "preview_boundary_epsilon": {
+      "default": 0.000001,
+      "maximum": 0.001,
+      "minimum": 0,
+      "title": "Preview Boundary Epsilon",
+      "type": "number"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "title": "ExportConfig",
+  "type": "object"
+}

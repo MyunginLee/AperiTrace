@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_version": "canonical_parity_v1",
+  "source_fixture": "tests/fixtures/canonical_small_v1",
+  "cases": [
+    {"name": "phi_0", "phi": [0.0, 0.0]},
+    {"name": "phi_a", "phi": [0.05, -0.04]},
+    {"name": "phi_b", "phi": [0.0000001, -0.00000002]},
+    {"name": "phi_c", "phi": [0.25, -0.25]}
+  ],
+  "q_vectors": [[0,0,0],[1,2,0],[-1,-2,0],[3,1,0],[-3,-1,0],[0,0,2],[0,0,-2]],
+  "thresholds": {
+    "basis_max_abs_error": 1.0e-12,
+    "window_vertex_max_error": 1.0e-12,
+    "physical_coordinate_max_error": 1.0e-12,
+    "internal_coordinate_max_error": 1.0e-12,
+    "signed_distance_max_error": 1.0e-12,
+    "amplitude_max_abs_error": 1.0e-12,
+    "diffraction_max_abs_error": 1.0e-10,
+    "normalized_intensity_max_abs_error": 1.0e-12,
+    "gpu_boundary_band": 1.0e-6,
+    "cpu_id_disagreements": 0,
+    "gpu_disagreements_outside_band": 0,
+    "runtime_float_loss": 1.0e-6
+  }
+}

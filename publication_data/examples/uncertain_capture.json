@@ -1,0 +1,28 @@
+{
+  "source_image_sha256": "d39cd37a6c8bc2258bdaec227eee705f4ec0da1170724736c4c983924f8f8ece",
+  "source_dimensions": [
+    2400,
+    1000
+  ],
+  "method": "Pixel-preserved crops of recorded application; no reconstruction",
+  "panels": {
+    "uncertain_status.png": {
+      "crop_box": [
+        0,
+        45,
+        2400,
+        87
+      ],
+      "sha256": "8f77ef75079449fcfba9eb2126bb86f87d5e95f677ea5b0954418c4981c39ca0"
+    },
+    "uncertain_panels.png": {
+      "crop_box": [
+        0,
+        145,
+        2400,
+        1000
+      ],
+      "sha256": "3a1dc52f6cc21dc8759a8aa4aa82dbb86913a63f82cde06752eedab4d4ac8fe8"
+    }
+  }
+}

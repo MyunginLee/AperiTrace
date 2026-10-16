@@ -1,0 +1,122 @@
+{
+  "F_imag": [
+    0.0,
+    -1.1102230246251565e-16,
+    1.1102230246251565e-16,
+    0.0,
+    0.0,
+    -2.220446049250313e-16,
+    2.220446049250313e-16
+  ],
+  "F_real": [
+    11.0,
+    6.591341431709153,
+    6.591341431709153,
+    3.238912807696297,
+    3.238912807696297,
+    7.259656245307648,
+    7.259656245307648
+  ],
+  "intensity_normalized": [
+    1.0,
+    0.3590560485071542,
+    0.3590560485071542,
+    0.08669881137073644,
+    0.08669881137073644,
+    0.4355587504135069,
+    0.4355587504135069
+  ],
+  "intensity_raw": [
+    121.0,
+    43.44578186936566,
+    43.44578186936566,
+    10.49055617585911,
+    10.49055617585911,
+    52.702608800034334,
+    52.702608800034334
+  ],
+  "parameters": {
+    "central_intensity": 121.0,
+    "datasets": {
+      "F_complex128": {
+        "dtype": "<c16",
+        "path": "diffraction/F_complex128",
+        "sha256": "b640e954e89fc5fe4b4d3ea069193f374db802dc9956938cd63c2be7d6b13c2c",
+        "shape": [
+          7
+        ]
+      },
+      "intensity_normalized": {
+        "dtype": "<f8",
+        "path": "diffraction/intensity_normalized",
+        "sha256": "3becf61c90549fb67958269f77eb04899e977dc3f447acb84f6ab56fb0c2d829",
+        "shape": [
+          7
+        ]
+      },
+      "intensity_raw": {
+        "dtype": "<f8",
+        "path": "diffraction/intensity_raw",
+        "sha256": "3c86525707732a26e2045c89d4c873769afdab8e82ab590ab53909e6f0e76e88",
+        "shape": [
+          7
+        ]
+      },
+      "q_xyz": {
+        "dtype": "<f8",
+        "path": "diffraction/q_xyz",
+        "sha256": "945fbbb3ec2cf42def52f91ffab4aa68a8df640a7204bd8a622a1cdcbd01bf49",
+        "shape": [
+          7,
+          3
+        ]
+      }
+    },
+    "normalization": "I(q)/I(0)",
+    "q_count": 7,
+    "sampling": "explicit_q_xyz_samples",
+    "schema_version": "1.0.0",
+    "selected_ids_sha256": "cb7d99d8cf50bab46f2aa7804f1fbde65df75fbb8553e084ca5807251254c346",
+    "sign": "exp(+i*q.r)",
+    "weighting": "real_unit",
+    "windowing": "hard_scientific_crop_no_taper"
+  },
+  "q_xyz": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      2.0,
+      0.0
+    ],
+    [
+      -1.0,
+      -2.0,
+      0.0
+    ],
+    [
+      3.0,
+      1.0,
+      0.0
+    ],
+    [
+      -3.0,
+      -1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      -2.0
+    ]
+  ],
+  "schema_version": "1.0.0"
+}

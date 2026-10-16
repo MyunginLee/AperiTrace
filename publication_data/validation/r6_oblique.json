@@ -1,0 +1,81 @@
+{
+  "case": "r6_oblique",
+  "candidate_count": 4871,
+  "original_probe_count": 1081,
+  "original_unresolved": 855,
+  "unresolved_decomposition": {
+    "adjacent_no_interior": 174,
+    "representable_interior": 681
+  },
+  "original_candidate_disagreements": 1074,
+  "unresolved_structural_same_kind_adjacent_roots": 257,
+  "unresolved_midpoint_equals_endpoint": 174,
+  "unresolved_parameter_length_sum": 1.9918615368208492e-13,
+  "unresolved_union_measure": 1.9918615368208492e-13,
+  "structural_classes": 1410,
+  "structural_float_split_classes": 644,
+  "expanded_query_count": 3457,
+  "uncertain_queries": 3036,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 9.527702634644241e-17,
+  "absolute_normalized_intensity_max_abs": 4.336808689942018e-18,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 128,
+      "missed_count": 12,
+      "missed_ids": [
+        "-3,-2,1,3,-1",
+        "-3,0,3,0,-2",
+        "-2,-1,2,4,0",
+        "-2,1,4,1,-1",
+        "-1,0,0,2,0",
+        "-1,2,0,-1,-3",
+        "0,-3,-1,3,2",
+        "0,-2,-2,-1,2",
+        "0,-1,1,0,1",
+        "0,3,1,0,-2",
+        "1,-1,-1,0,3",
+        "2,3,0,-4,-1"
+      ],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2320445423948649,
+        0.5148768615265069,
+        0.6550662570285783,
+        0.9117302092501073
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 128,
+      "missed_count": 2,
+      "missed_ids": [
+        "0,-1,1,0,1",
+        "2,3,0,-4,-1"
+      ],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2320445423948649,
+        0.5148768615265069,
+        0.6550662570285783,
+        0.9117302092501073
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 128,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.00928351818236764,
+        0.2320445423948649,
+        0.5148768615265069,
+        0.6550662570285783,
+        0.9117302092501073
+      ]
+    }
+  ],
+  "tier_b": null
+}

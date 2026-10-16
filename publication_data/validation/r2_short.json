@@ -1,0 +1,81 @@
+{
+  "case": "r2_short",
+  "candidate_count": 571,
+  "original_probe_count": 35,
+  "original_unresolved": 22,
+  "unresolved_decomposition": {
+    "representable_interior": 22
+  },
+  "original_candidate_disagreements": 19,
+  "unresolved_structural_same_kind_adjacent_roots": 11,
+  "unresolved_midpoint_equals_endpoint": 0,
+  "unresolved_parameter_length_sum": 4.590772206825022e-14,
+  "unresolved_union_measure": 4.590772206825022e-14,
+  "structural_classes": 160,
+  "structural_float_split_classes": 76,
+  "expanded_query_count": 331,
+  "uncertain_queries": 123,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 1.0098408852538452e-16,
+  "absolute_normalized_intensity_max_abs": 3.469446951953614e-17,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 2,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.03827658841198417,
+        0.03827658841198779,
+        0.038276588411991413,
+        0.038276588411995036,
+        0.03827658841199866
+      ]
+    }
+  ],
+  "tier_b": {
+    "construction": "independent algebraic square roots; decimal path literals; 80/100 digits",
+    "probe_count": 331,
+    "candidate_differences_all": 97,
+    "candidate_differences_clear": 0,
+    "precision_80_100_candidate_differences": 0,
+    "frozen_float_tier_a_candidate_differences": 36,
+    "endpoint_max_abs": 8.770761894538737e-15,
+    "hull_vertices": 10,
+    "P_perp_e_float_residual": [
+      -1.1102230246251565e-16,
+      1.6653345369377348e-16
+    ],
+    "P_perp_e_decimal_residual": [
+      "0E-80",
+      "0E-80"
+    ]
+  }
+}

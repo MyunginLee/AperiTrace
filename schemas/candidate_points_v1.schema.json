@@ -1,0 +1,86 @@
+{
+  "$defs": {
+    "ArrayDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "dtype": {
+          "enum": [
+            "<i4",
+            "<u4",
+            "<u8",
+            "<f8",
+            "<c16",
+            "|b1",
+            "|i1",
+            "|u1",
+            "<U59"
+          ],
+          "title": "Dtype",
+          "type": "string"
+        },
+        "path": {
+          "pattern": "^[^/\\\\:\\x00-\\x1f]+(?:/[^/\\\\:\\x00-\\x1f]+)*$",
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "shape": {
+          "items": {
+            "maximum": 2000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Shape",
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "dtype",
+        "shape",
+        "sha256"
+      ],
+      "title": "ArrayDescriptor",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "count": {
+      "maximum": 2000000,
+      "minimum": 0,
+      "title": "Count",
+      "type": "integer"
+    },
+    "datasets": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ArrayDescriptor"
+      },
+      "title": "Datasets",
+      "type": "object"
+    },
+    "order": {
+      "const": "tuple_lexicographic",
+      "default": "tuple_lexicographic",
+      "title": "Order",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "count",
+    "datasets"
+  ],
+  "title": "CandidatePoints",
+  "type": "object"
+}

@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "P_parallel": {
+      "maxItems": 3,
+      "minItems": 3,
+      "prefixItems": [
+        {
+          "maxItems": 5,
+          "minItems": 5,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        {
+          "maxItems": 5,
+          "minItems": 5,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        {
+          "maxItems": 5,
+          "minItems": 5,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        }
+      ],
+      "title": "P Parallel",
+      "type": "array"
+    },
+    "P_perp": {
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+        {
+          "maxItems": 5,
+          "minItems": 5,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        {
+          "maxItems": 5,
+          "minItems": 5,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        }
+      ],
+      "title": "P Perp",
+      "type": "array"
+    },
+    "kind": {
+      "const": "canonical_c5_real_dft",
+      "default": "canonical_c5_real_dft",
+      "title": "Kind",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "P_parallel",
+    "P_perp"
+  ],
+  "title": "BasisDefinition",
+  "type": "object"
+}

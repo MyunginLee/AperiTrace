@@ -1,0 +1,461 @@
+{
+  "authoritative_sha256": "fb46c78cafcadf9fc0e2cc252ff0a66b8512f67687fe6205273074f5567bb7ee",
+  "file_name": "authoritative.npz",
+  "metadata": {
+    "basis": {
+      "P_parallel": [
+        [
+          0.6324555320336759,
+          0.19543950758485482,
+          -0.5116672736016927,
+          -0.5116672736016927,
+          0.19543950758485468
+        ],
+        [
+          0.0,
+          0.6015009550075456,
+          0.37174803446018456,
+          -0.37174803446018445,
+          -0.6015009550075457
+        ],
+        [
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579,
+          0.4472135954999579
+        ]
+      ],
+      "P_perp": [
+        [
+          0.6324555320336759,
+          -0.5116672736016927,
+          0.19543950758485468,
+          0.19543950758485498,
+          -0.511667273601693
+        ],
+        [
+          0.0,
+          0.37174803446018456,
+          -0.6015009550075457,
+          0.6015009550075456,
+          -0.3717480344601843
+        ]
+      ],
+      "kind": "canonical_c5_real_dft",
+      "schema_version": "1.0.0"
+    },
+    "candidates": {
+      "count": 981,
+      "datasets": {
+        "candidate_bool": {
+          "dtype": "|b1",
+          "path": "points/candidate_bool",
+          "sha256": "c80639098cfb436bc6910fd7bc4b99831aff79cff188efd635ba565420d0066d",
+          "shape": [
+            981
+          ]
+        },
+        "internal_uv_float64": {
+          "dtype": "<f8",
+          "path": "points/internal_uv_float64",
+          "sha256": "34072ba3ea2c10b70dee0878d0516c58caacefb53b2b70b43c9b44cf6e841dba",
+          "shape": [
+            981,
+            2
+          ]
+        },
+        "lattice_n_int32": {
+          "dtype": "<i4",
+          "path": "points/lattice_n_int32",
+          "sha256": "0f9041120c39f2f5b5914c502a0b219ae68968d797235265501868a8b7f55955",
+          "shape": [
+            981,
+            5
+          ]
+        },
+        "lookup_hash_uint64": {
+          "dtype": "<u8",
+          "path": "points/lookup_hash_uint64",
+          "sha256": "60ae2429024b21537578c6800c5ce943911ab345406716cbaf9af35c42b551d8",
+          "shape": [
+            981
+          ]
+        },
+        "physical_xyz_float64": {
+          "dtype": "<f8",
+          "path": "points/physical_xyz_float64",
+          "sha256": "572a429e23d9b1c33a57c71385ad786d9fd5b636f07933808d04084b4a34d728",
+          "shape": [
+            981,
+            3
+          ]
+        },
+        "stable_id": {
+          "dtype": "<U59",
+          "path": "points/stable_id",
+          "sha256": "8832174d58cec5d3c47091b3d62d3c2a65b4ef47dfb4da4fb44eb48575ed6915",
+          "shape": [
+            981
+          ]
+        }
+      },
+      "order": "tuple_lexicographic",
+      "schema_version": "1.0.0"
+    },
+    "code_revision": null,
+    "config_hash": "f37d9a6047cc7ba8924aaece940546028b979e57891fd1724dc18e94daa0ece1",
+    "coordinate_units": "dimensionless",
+    "dependency_versions": {
+      "numpy": "2.5.3",
+      "pydantic": "2.13.5",
+      "scipy": "1.18.1"
+    },
+    "diffraction": {
+      "central_intensity": 203401.0,
+      "datasets": {
+        "F_complex128": {
+          "dtype": "<c16",
+          "path": "diffraction/F_complex128",
+          "sha256": "1f5b38e85c91d01c978b161b2e1baa0eeaf37344116ffdcf6d700b5def3689f0",
+          "shape": [
+            4102
+          ]
+        },
+        "intensity_normalized": {
+          "dtype": "<f8",
+          "path": "diffraction/intensity_normalized",
+          "sha256": "19382521fca3da940607f67b6423f8317608c2f1be12fe50892b7e60ced19268",
+          "shape": [
+            4102
+          ]
+        },
+        "intensity_raw": {
+          "dtype": "<f8",
+          "path": "diffraction/intensity_raw",
+          "sha256": "cbd81fefd0d95b2e7be0ccd50449ce572f182ec7b8fd543f083c6946e0df49a1",
+          "shape": [
+            4102
+          ]
+        },
+        "q_xyz": {
+          "dtype": "<f8",
+          "path": "diffraction/q_xyz",
+          "sha256": "504a9c8eda614af1e86423869d8749095df63d2ac968e9182dc5f0113b82d053",
+          "shape": [
+            4102,
+            3
+          ]
+        }
+      },
+      "normalization": "I(q)/I(0)",
+      "q_count": 4102,
+      "sampling": "explicit_q_xyz_samples",
+      "schema_version": "1.0.0",
+      "selected_ids_sha256": "35f57925540a37a4391c729f46097767400388260390b3d7e8b5d56713828b4f",
+      "sign": "exp(+i*q.r)",
+      "weighting": "real_unit",
+      "windowing": "hard_scientific_crop_no_taper"
+    },
+    "graph": {
+      "datasets": {
+        "endpoints_uint32": {
+          "dtype": "<u4",
+          "path": "graph/endpoints_uint32",
+          "sha256": "60bd10602d341b7bb59ba4c1d96d0eac1d071623d28d4dce91c2847aed00d3ea",
+          "shape": [
+            980,
+            2
+          ]
+        },
+        "generator": {
+          "dtype": "|i1",
+          "path": "graph/generator",
+          "sha256": "300eeac31a5c1a88d8bac4d8cb6a057a95006f8f1e08cb1c169f55d42f9f1fb5",
+          "shape": [
+            980
+          ]
+        },
+        "sign": {
+          "dtype": "|i1",
+          "path": "graph/sign",
+          "sha256": "77c4d305047e56acc28d6d0273123f7c228965d0b7d1248fef6001c8a374761e",
+          "shape": [
+            980
+          ]
+        }
+      },
+      "edge_count": 980,
+      "endpoints": "candidate_row_indices",
+      "orientation": "positive_generator_once",
+      "schema_version": "1.0.0"
+    },
+    "input_checksums": {
+      "stage2_modelset": "d9d9029d27376c73c876010fa695e46a088a9fb10aa57f536ca70edfd4276713",
+      "stage3_diffraction": "20c0b6557b4972d7f891d22f82d739b72b75523056d2f87002a42b8b05a14463"
+    },
+    "kind": "authoritative_canonical_modelset",
+    "material": {
+      "kind": "canonical_model",
+      "license_or_access_terms": null,
+      "name": "idealized canonical decagonal model set",
+      "published_parameters": {},
+      "references": [],
+      "retrieval_date": null,
+      "schema_version": "1.0.0",
+      "source_sha256": null,
+      "source_url": null,
+      "units": "dimensionless"
+    },
+    "model": {
+      "parameters": {
+        "boundary_epsilon_relative": 1e-10,
+        "boundary_policy": "exclude",
+        "chunk_size": 4096,
+        "index_bound": 3,
+        "initial_phi": [
+          0.0,
+          0.0
+        ],
+        "max_candidates": 2000000,
+        "model_name": "canonical_decagonal_3plus2",
+        "phason_domain": {
+          "kind": "box",
+          "max": [
+            0.25,
+            0.25
+          ],
+          "min": [
+            -0.25,
+            -0.25
+          ]
+        },
+        "physical_crop": {
+          "kind": "cylinder",
+          "radial_max": 4.0,
+          "z_abs_max": 1.5
+        },
+        "physical_scale": {
+          "xy": 1.0,
+          "z": 0.35
+        },
+        "schema_version": "1.0"
+      },
+      "schema_version": "1.0.0"
+    },
+    "phason_convention": "u=P_perp*n+phi",
+    "phason_frames": [],
+    "q_units": "radians_per_model_length",
+    "schema_version": "1.0.0",
+    "scientific_coordinates_unscaled": true,
+    "source_files": [
+      {
+        "path": "src/qc5d/__init__.py",
+        "sha256": "d98008f4e7ecd95fe0542ceabfec4f6c5d98538ad55862e7edf8b5ce64643f27"
+      },
+      {
+        "path": "src/qc5d/__main__.py",
+        "sha256": "2d7d00d8697413e2e49ddb809165d750b388066b4fc518101e2b2d01b05507f4"
+      },
+      {
+        "path": "src/qc5d/authoritative.py",
+        "sha256": "c8abfb843bbce69e731b74d594e0c7fb8c834e54e8f776b6aa3eda2effcbc92d"
+      },
+      {
+        "path": "src/qc5d/basis.py",
+        "sha256": "cf7680fea8fc3098452c49ca1f6a8ea9b50f80159d12d3709699066d2a4c167b"
+      },
+      {
+        "path": "src/qc5d/checksums.py",
+        "sha256": "23c5c95b35639661874b74c8bfdbb467461fc4dce200123c2109d6b5d1ad0401"
+      },
+      {
+        "path": "src/qc5d/cli.py",
+        "sha256": "8a9c682d82011d336045a6c3cc3beb69010744008015aa8e448f1776edc892ee"
+      },
+      {
+        "path": "src/qc5d/config.py",
+        "sha256": "865b7d69bbd9c271783454bc2685ac19d205b257fcfbf539e487fe74c21d6ba0"
+      },
+      {
+        "path": "src/qc5d/data_schema.py",
+        "sha256": "3faf2119f9d6065e09179ce07541341892d89b4072be3eab1687d35eca70818f"
+      },
+      {
+        "path": "src/qc5d/data_workflows.py",
+        "sha256": "25ce7be5dc4bc910f5c8c5e7fec0add805990da8daeeab25b5a75bceb2108652"
+      },
+      {
+        "path": "src/qc5d/diagnostics.py",
+        "sha256": "dd17407df4bf9e2a544f51ac00e35bb3552138d8ec0249f12e80ad650b13ab6c"
+      },
+      {
+        "path": "src/qc5d/diffraction.py",
+        "sha256": "1ef36a9e8325a67c653b3e364bce2459b5e090e7b781ea696105e7f76bd930e2"
+      },
+      {
+        "path": "src/qc5d/diffraction_config.py",
+        "sha256": "00a5e47e84c08d92b87c3a638a3554074457e6536385c1bcb1d2732a390c750d"
+      },
+      {
+        "path": "src/qc5d/geometry.py",
+        "sha256": "88bfa4c90b822a2e93b5d28fff1bb7289898e20336ef870cebd986ce7beea10b"
+      },
+      {
+        "path": "src/qc5d/golden.py",
+        "sha256": "50a3adc57fef65cc26be66a0219e3c1d37f74921f6472ab4db24cb3b0153b714"
+      },
+      {
+        "path": "src/qc5d/graph.py",
+        "sha256": "12fee8f0612c8f31fd88e71c9f55727057c71887b4d3edce86e79411605c50d8"
+      },
+      {
+        "path": "src/qc5d/identity.py",
+        "sha256": "bfb652f97574cffd3f119147f56308e2aa495d2eabde312b457ff5e371d27864"
+      },
+      {
+        "path": "src/qc5d/manifest.py",
+        "sha256": "6953cbee1e267e1d4296bd90a0fecc6a715abf241af35d8fd6619efefcad2fe2"
+      },
+      {
+        "path": "src/qc5d/model_artifacts.py",
+        "sha256": "6d641d8721af7fcfdf959110b45796f12771835c1072d499decb4b5ec0d443aa"
+      },
+      {
+        "path": "src/qc5d/model_config.py",
+        "sha256": "1cf0e24b0cd99126482a672e1ebfd2f65a8326650dc3697eb0b55959344e8bca"
+      },
+      {
+        "path": "src/qc5d/modelset.py",
+        "sha256": "f2b26d5fcd4a006b3e856b06eb6c0665dbb1e8f837a41a98d444f5d363a02dc4"
+      },
+      {
+        "path": "src/qc5d/phason.py",
+        "sha256": "3d09f04a0b386cdd3a78290f0c8f297f9979ba7529cb94aa18fc2d173a112615"
+      },
+      {
+        "path": "src/qc5d/reciprocal.py",
+        "sha256": "5a7d3ff97860002bef79df6827d42f7277f235e4334b5ebc9d6cc0e632e2de20"
+      },
+      {
+        "path": "src/qc5d/reference.py",
+        "sha256": "cd1caf8c020d4498a276826e1c2ebc889eab2b36117772b1e8fb1adb8fb2ca90"
+      },
+      {
+        "path": "src/qc5d/runtime.py",
+        "sha256": "7035a69a08a96c52c3d1f1ea7ba6450ee19f864eaa0d58dd08b03145a8e3dbfd"
+      },
+      {
+        "path": "src/qc5d/safe_npz.py",
+        "sha256": "6d27944a92097ec5748104d07b7d2952f7ebf79142b9356e19e30a0c16b0af49"
+      },
+      {
+        "path": "src/qc5d/science.py",
+        "sha256": "12bbb5ff34c58bf6c752d4ac2325e3a44a226d60aa163f31e18c6f69d42b346a"
+      },
+      {
+        "path": "src/qc5d/science_artifacts.py",
+        "sha256": "2ea96c89ce239b8db89fe988f81f60cae9f21881e409bee8b321ecc42542c4d2"
+      },
+      {
+        "path": "src/qc5d/window.py",
+        "sha256": "2840bb8354e4b7237c5eddbdb4ffd470123cfee442f177757d9afbf6bb5f1a5a"
+      }
+    ],
+    "source_hash": "4ccfdfe6125734d370db8c8e721bf792abe264382ae3f29ad14f20b1d5957447",
+    "state": {
+      "boundary_count": 60,
+      "boundary_epsilon": 1.0233345472033855e-10,
+      "boundary_policy": "exclude",
+      "datasets": {
+        "boundary_bool": {
+          "dtype": "|b1",
+          "path": "points/boundary_bool",
+          "sha256": "bb09cf8bc4c9b0ee22129f983803260b00ec0866d208d624a56995ece4ed358d",
+          "shape": [
+            981
+          ]
+        },
+        "boundary_distance": {
+          "dtype": "<f8",
+          "path": "points/boundary_distance",
+          "sha256": "656a5316a296aab577b4f543bbaca01de2c9c260a576bf605a0c0bc8a30367fd",
+          "shape": [
+            981
+          ]
+        },
+        "phi0": {
+          "dtype": "<f8",
+          "path": "state/phi0",
+          "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+          "shape": [
+            2
+          ]
+        },
+        "selected_bool": {
+          "dtype": "|b1",
+          "path": "points/selected_bool",
+          "sha256": "60e7bba4634625559de0f13488cc7ae1e8e1d6201ed5ff4074db04031b1a18ca",
+          "shape": [
+            981
+          ]
+        }
+      },
+      "phi": [
+        0.0,
+        0.0
+      ],
+      "schema_version": "1.0.0",
+      "selected_count": 451
+    },
+    "window": {
+      "kind": "projected_centered_unit_cube",
+      "order": "ccw_from_lexicographic_minimum",
+      "schema_version": "1.0.0",
+      "signed_distance": "positive_inside_euclidean_edge_segments",
+      "vertices_uv": [
+        [
+          -1.0233345472033855,
+          1.942890293094024e-16
+        ],
+        [
+          -0.8278950396185308,
+          -0.6015009550075455
+        ],
+        [
+          -0.3162277660168382,
+          -0.9732489894677301
+        ],
+        [
+          0.31622776601683766,
+          -0.9732489894677301
+        ],
+        [
+          0.8278950396185306,
+          -0.6015009550075459
+        ],
+        [
+          1.0233345472033855,
+          -1.942890293094024e-16
+        ],
+        [
+          0.8278950396185308,
+          0.6015009550075455
+        ],
+        [
+          0.3162277660168382,
+          0.9732489894677301
+        ],
+        [
+          -0.31622776601683766,
+          0.9732489894677301
+        ],
+        [
+          -0.8278950396185306,
+          0.6015009550075459
+        ]
+      ]
+    }
+  },
+  "schema_version": "1.0.0"
+}

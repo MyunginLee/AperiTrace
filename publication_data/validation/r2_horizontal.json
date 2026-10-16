@@ -1,0 +1,82 @@
+{
+  "case": "r2_horizontal",
+  "candidate_count": 571,
+  "original_probe_count": 142,
+  "original_unresolved": 71,
+  "unresolved_decomposition": {
+    "adjacent_no_interior": 12,
+    "representable_interior": 59
+  },
+  "original_candidate_disagreements": 52,
+  "unresolved_structural_same_kind_adjacent_roots": 41,
+  "unresolved_midpoint_equals_endpoint": 12,
+  "unresolved_parameter_length_sum": 1.5404344466674047e-14,
+  "unresolved_union_measure": 1.5404344466674047e-14,
+  "structural_classes": 160,
+  "structural_float_split_classes": 71,
+  "expanded_query_count": 677,
+  "uncertain_queries": 411,
+  "clear_membership_differences": 0,
+  "returned_uncertain_membership_differences": 0,
+  "count_normalized_amplitude_max_abs": 1.8403019242261617e-16,
+  "absolute_normalized_intensity_max_abs": 4.163336342344337e-17,
+  "sampling": [
+    {
+      "query_count": 9,
+      "eligible_excursions": 7,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641803,
+        0.4694406828641804,
+        0.46944068286418067,
+        0.6776309269302238,
+        0.7132665160934347
+      ]
+    },
+    {
+      "query_count": 33,
+      "eligible_excursions": 7,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641803,
+        0.4694406828641804,
+        0.46944068286418067,
+        0.6776309269302238,
+        0.7132665160934347
+      ]
+    },
+    {
+      "query_count": 129,
+      "eligible_excursions": 7,
+      "missed_count": 0,
+      "missed_ids": [],
+      "width_quantiles": [
+        0.4694406828641803,
+        0.4694406828641804,
+        0.46944068286418067,
+        0.6776309269302238,
+        0.7132665160934347
+      ]
+    }
+  ],
+  "tier_b": {
+    "construction": "independent algebraic square roots; decimal path literals; 80/100 digits",
+    "probe_count": 677,
+    "candidate_differences_all": 305,
+    "candidate_differences_clear": 0,
+    "precision_80_100_candidate_differences": 0,
+    "frozen_float_tier_a_candidate_differences": 70,
+    "endpoint_max_abs": 1.1102230246251565e-15,
+    "hull_vertices": 10,
+    "P_perp_e_float_residual": [
+      -1.1102230246251565e-16,
+      1.6653345369377348e-16
+    ],
+    "P_perp_e_decimal_residual": [
+      "0E-80",
+      "0E-80"
+    ]
+  }
+}

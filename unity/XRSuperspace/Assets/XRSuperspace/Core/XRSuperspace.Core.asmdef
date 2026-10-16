@@ -1,0 +1,5 @@
+{
+  "name": "XRSuperspace.Core",
+  "rootNamespace": "XRSuperspace",
+  "noEngineReferences": true
+}

@@ -1,0 +1,8 @@
+# Protect reproducible source hashes from platform checkout newline conversion.
+* text=auto eol=lf
+tests/fixtures/** -text
+configs/canonical_small_fixture_v1.json -text
+publication_data/** -text
+*.npz binary
+*.png binary
+*.pdf binary

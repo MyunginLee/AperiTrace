@@ -1,0 +1,50 @@
+{
+  "authoritative_sha256": "e488c800a8dfdd109e498ae93f5d2c677f083f7c868b8fee67cb0271937a3a3b",
+  "binary_sha256": "2942d45e5d6bb1c171c2cbf535943217a4c4a7e5c3355a1fa9828af5ec2dd2e8",
+  "binary_size_bytes": 2298,
+  "boundary_distance_error": {
+    "max_abs": 2.872456117408717e-08,
+    "rms": 7.09351036254509e-09
+  },
+  "candidate_count": 31,
+  "checks": {
+    "boundary_distance_loss_bounded": true,
+    "boundary_mask_roundtrip_exact": true,
+    "coordinate_loss_bounded": true,
+    "graph_roundtrip_exact": true,
+    "preview_selected_mask_parity_at_phi0": true,
+    "selected_mask_roundtrip_exact": true,
+    "stable_hashes_preserved": true,
+    "stable_ids_preserved": true
+  },
+  "config": {
+    "boundary_distance_atol": 1e-06,
+    "coordinate_atol": 1e-06,
+    "internal_uv_scale": 1.0,
+    "preview_boundary_epsilon": 1e-06,
+    "schema_version": "1.0.0"
+  },
+  "coordinate_error_units": "dimensionless scientific component absolute error",
+  "coordinate_errors": {
+    "internal": {
+      "max_abs": 5.32111972262328e-08,
+      "rms": 2.1702581903135028e-08
+    },
+    "physical": {
+      "max_abs": 2.66055987241387e-08,
+      "rms": 1.114085191073646e-08
+    },
+    "window": {
+      "max_abs": 4.4029557333402636e-08,
+      "rms": 2.2533685494579938e-08
+    }
+  },
+  "edge_count": 10,
+  "passed": true,
+  "preview_boundary_disagreement_ids": [],
+  "preview_disagreement_ids": [],
+  "preview_semantics": "float32-quantized operands classified using Python float64; not GPU parity",
+  "rms_definition": "sqrt(mean(error^2)) over all scalar components",
+  "schema_version": "1.0.0",
+  "selected_count": 11
+}

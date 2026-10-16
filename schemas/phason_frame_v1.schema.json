@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundary_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Boundary Ids",
+      "type": "array"
+    },
+    "entered_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Entered Ids",
+      "type": "array"
+    },
+    "exited_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Exited Ids",
+      "type": "array"
+    },
+    "phi": {
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+        {
+          "maximum": 1000000,
+          "minimum": -1000000,
+          "type": "number"
+        },
+        {
+          "maximum": 1000000,
+          "minimum": -1000000,
+          "type": "number"
+        }
+      ],
+      "title": "Phi",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "phi",
+    "selected_ids",
+    "boundary_ids",
+    "entered_ids",
+    "exited_ids"
+  ],
+  "title": "PhasonFrame",
+  "type": "object"
+}

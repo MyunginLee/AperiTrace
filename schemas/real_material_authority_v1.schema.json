@@ -1,0 +1,1018 @@
+{
+  "$defs": {
+    "ArrayDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "dtype": {
+          "enum": [
+            "<f8",
+            "<i4"
+          ],
+          "title": "Dtype",
+          "type": "string"
+        },
+        "shape": {
+          "items": {
+            "maximum": 50000,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Shape",
+          "type": "array"
+        }
+      },
+      "required": [
+        "dtype",
+        "shape"
+      ],
+      "title": "ArrayDescriptor",
+      "type": "object"
+    },
+    "Atom": {
+      "additionalProperties": false,
+      "properties": {
+        "n": {
+          "items": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "N",
+          "type": "array"
+        },
+        "site_id": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Site Id",
+          "type": "string"
+        },
+        "source_internal": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Source Internal",
+          "type": "array"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "source_physical": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Source Physical",
+          "type": "array"
+        }
+      },
+      "required": [
+        "n",
+        "site_id",
+        "source_physical",
+        "source_internal",
+        "source_locator"
+      ],
+      "title": "Atom",
+      "type": "object"
+    },
+    "AuthorityArrays": {
+      "additionalProperties": false,
+      "properties": {
+        "fractional_5d": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "internal": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "n": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "occupancy": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "physical_angstrom": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "source_internal": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        },
+        "source_physical": {
+          "$ref": "#/$defs/ArrayDescriptor"
+        }
+      },
+      "required": [
+        "n",
+        "fractional_5d",
+        "physical_angstrom",
+        "internal",
+        "source_physical",
+        "source_internal",
+        "occupancy"
+      ],
+      "title": "AuthorityArrays",
+      "type": "object"
+    },
+    "Convention": {
+      "additionalProperties": false,
+      "properties": {
+        "change_description": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Change Description",
+          "type": "string"
+        },
+        "internal_axes": {
+          "items": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Internal Axes",
+          "type": "array"
+        },
+        "internal_transform": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Internal Transform",
+          "type": "array"
+        },
+        "internal_units": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Internal Units",
+          "type": "string"
+        },
+        "lattice_axes": {
+          "items": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "Lattice Axes",
+          "type": "array"
+        },
+        "output_internal_units": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Output Internal Units",
+          "type": "string"
+        },
+        "physical_axes": {
+          "items": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Physical Axes",
+          "type": "array"
+        },
+        "physical_to_angstrom": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Physical To Angstrom",
+          "type": "array"
+        }
+      },
+      "required": [
+        "lattice_axes",
+        "physical_axes",
+        "internal_axes",
+        "internal_units",
+        "physical_to_angstrom",
+        "internal_transform",
+        "output_internal_units",
+        "change_description"
+      ],
+      "title": "Convention",
+      "type": "object"
+    },
+    "DiffractionCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_tolerance": {
+          "exclusiveMinimum": 0,
+          "title": "Absolute Tolerance",
+          "type": "number"
+        },
+        "intensity_units": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Intensity Units",
+          "type": "string"
+        },
+        "kind": {
+          "const": "finite_patch_intensity",
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "source_q": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Source Q",
+          "type": "array"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        },
+        "weights_include_occupancy_form_factor_dw": {
+          "const": true,
+          "title": "Weights Include Occupancy Form Factor Dw",
+          "type": "boolean"
+        },
+        "weights_real_imag": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "maxItems": 50000,
+          "minItems": 1,
+          "title": "Weights Real Imag",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "source_q",
+        "weights_real_imag",
+        "weights_include_occupancy_form_factor_dw",
+        "value",
+        "absolute_tolerance",
+        "intensity_units",
+        "source_locator"
+      ],
+      "title": "DiffractionCheck",
+      "type": "object"
+    },
+    "DistanceCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_tolerance": {
+          "exclusiveMinimum": 0,
+          "title": "Absolute Tolerance",
+          "type": "number"
+        },
+        "atom_rows": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Atom Rows",
+          "type": "array"
+        },
+        "kind": {
+          "const": "distance",
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "units": {
+          "enum": [
+            "angstrom",
+            "nanometre"
+          ],
+          "title": "Units",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "atom_rows",
+        "value",
+        "absolute_tolerance",
+        "units",
+        "source_locator"
+      ],
+      "title": "DistanceCheck",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "attested_real_material": {
+          "title": "Attested Real Material",
+          "type": "boolean"
+        },
+        "basis_table": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Basis Table",
+          "type": "string"
+        },
+        "constraints_table": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Constraints Table",
+          "type": "string"
+        },
+        "coordinates_table": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Coordinates Table",
+          "type": "string"
+        },
+        "domains_table": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Domains Table",
+          "type": "string"
+        },
+        "independent_check_note": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Independent Check Note",
+          "type": "string"
+        },
+        "reported_values_table_or_unavailability": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reported Values Table Or Unavailability",
+          "type": "string"
+        },
+        "reviewer": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "sites_table": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Sites Table",
+          "type": "string"
+        }
+      },
+      "required": [
+        "attested_real_material",
+        "reviewer",
+        "independent_check_note",
+        "basis_table",
+        "sites_table",
+        "domains_table",
+        "coordinates_table",
+        "constraints_table",
+        "reported_values_table_or_unavailability"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "PeriodicDirection": {
+      "additionalProperties": false,
+      "properties": {
+        "n": {
+          "items": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "N",
+          "type": "array"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "source_physical_vector": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Source Physical Vector",
+          "type": "array"
+        },
+        "tolerance": {
+          "exclusiveMinimum": 0,
+          "title": "Tolerance",
+          "type": "number"
+        }
+      },
+      "required": [
+        "n",
+        "source_physical_vector",
+        "tolerance",
+        "source_locator"
+      ],
+      "title": "PeriodicDirection",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "composition": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Composition",
+          "type": "string"
+        },
+        "coordinate_setting": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Coordinate Setting",
+          "type": "string"
+        },
+        "doi_or_repository_id": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Doi Or Repository Id",
+          "type": "string"
+        },
+        "internal_dimension": {
+          "const": 2,
+          "title": "Internal Dimension",
+          "type": "integer"
+        },
+        "known_limitations": {
+          "items": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "title": "Known Limitations",
+          "type": "array"
+        },
+        "length_units": {
+          "enum": [
+            "angstrom",
+            "nanometre"
+          ],
+          "title": "Length Units",
+          "type": "string"
+        },
+        "license_or_terms": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "License Or Terms",
+          "type": "string"
+        },
+        "material_name": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Material Name",
+          "type": "string"
+        },
+        "model_kind": {
+          "const": "decagonal_5d_track_a",
+          "title": "Model Kind",
+          "type": "string"
+        },
+        "physical_dimension": {
+          "const": 3,
+          "title": "Physical Dimension",
+          "type": "integer"
+        },
+        "reciprocal_units": {
+          "enum": [
+            "radians_per_angstrom",
+            "cycles_per_angstrom",
+            "radians_per_nanometre",
+            "cycles_per_nanometre"
+          ],
+          "title": "Reciprocal Units",
+          "type": "string"
+        },
+        "retrieval_date": {
+          "format": "date",
+          "title": "Retrieval Date",
+          "type": "string"
+        },
+        "source_authors": {
+          "items": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "title": "Source Authors",
+          "type": "array"
+        },
+        "source_file_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source File Sha256",
+          "type": "string"
+        },
+        "source_origin": {
+          "enum": [
+            "user_supplied",
+            "authoritative_repository",
+            "primary_paper_transcription"
+          ],
+          "title": "Source Origin",
+          "type": "string"
+        },
+        "source_title": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Title",
+          "type": "string"
+        },
+        "source_year": {
+          "maximum": 9999,
+          "minimum": 1800,
+          "title": "Source Year",
+          "type": "integer"
+        },
+        "superspace_dimension": {
+          "const": 5,
+          "title": "Superspace Dimension",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "material_name",
+        "composition",
+        "model_kind",
+        "source_title",
+        "source_authors",
+        "source_year",
+        "doi_or_repository_id",
+        "retrieval_date",
+        "license_or_terms",
+        "source_file_sha256",
+        "superspace_dimension",
+        "physical_dimension",
+        "internal_dimension",
+        "coordinate_setting",
+        "length_units",
+        "reciprocal_units",
+        "known_limitations",
+        "source_origin"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Site": {
+      "additionalProperties": false,
+      "properties": {
+        "fractional_5d": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "Fractional 5D",
+          "type": "array"
+        },
+        "occupancy": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Occupancy",
+          "type": "number"
+        },
+        "occupation_domain": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "maxItems": 256,
+          "minItems": 3,
+          "title": "Occupation Domain",
+          "type": "array"
+        },
+        "site_id": {
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Site Id",
+          "type": "string"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "species": {
+          "pattern": "^[A-Z][a-z]?$",
+          "title": "Species",
+          "type": "string"
+        }
+      },
+      "required": [
+        "site_id",
+        "fractional_5d",
+        "species",
+        "occupancy",
+        "occupation_domain",
+        "source_locator"
+      ],
+      "title": "Site",
+      "type": "object"
+    },
+    "SourceBundle": {
+      "additionalProperties": false,
+      "properties": {
+        "atoms": {
+          "items": {
+            "$ref": "#/$defs/Atom"
+          },
+          "maxItems": 50000,
+          "minItems": 1,
+          "title": "Atoms",
+          "type": "array"
+        },
+        "boundary_epsilon": {
+          "exclusiveMinimum": 0,
+          "title": "Boundary Epsilon",
+          "type": "number"
+        },
+        "boundary_policy": {
+          "enum": [
+            "exclude",
+            "include"
+          ],
+          "title": "Boundary Policy",
+          "type": "string"
+        },
+        "convention": {
+          "$ref": "#/$defs/Convention"
+        },
+        "coordinate_tolerance": {
+          "exclusiveMinimum": 0,
+          "title": "Coordinate Tolerance",
+          "type": "number"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "p_parallel": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 5,
+            "minItems": 5,
+            "type": "array"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "P Parallel",
+          "type": "array"
+        },
+        "p_perp": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 5,
+            "minItems": 5,
+            "type": "array"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "P Perp",
+          "type": "array"
+        },
+        "periodic_direction": {
+          "$ref": "#/$defs/PeriodicDirection"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "reported_values": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "distance": "#/$defs/DistanceCheck",
+                "finite_patch_intensity": "#/$defs/DiffractionCheck"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/DistanceCheck"
+              },
+              {
+                "$ref": "#/$defs/DiffractionCheck"
+              }
+            ]
+          },
+          "maxItems": 256,
+          "title": "Reported Values",
+          "type": "array"
+        },
+        "reported_values_unavailable_reason": {
+          "anyOf": [
+            {
+              "maxLength": 4096,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reported Values Unavailable Reason"
+        },
+        "schema_version": {
+          "const": "xr-material-source-1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sites": {
+          "items": {
+            "$ref": "#/$defs/Site"
+          },
+          "maxItems": 1000,
+          "minItems": 1,
+          "title": "Sites",
+          "type": "array"
+        },
+        "source_phi": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Source Phi",
+          "type": "array"
+        },
+        "symmetries": {
+          "items": {
+            "$ref": "#/$defs/Symmetry"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "title": "Symmetries",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "provenance",
+        "evidence",
+        "convention",
+        "p_parallel",
+        "p_perp",
+        "sites",
+        "atoms",
+        "source_phi",
+        "boundary_policy",
+        "boundary_epsilon",
+        "coordinate_tolerance",
+        "periodic_direction",
+        "symmetries",
+        "reported_values",
+        "reported_values_unavailable_reason"
+      ],
+      "title": "SourceBundle",
+      "type": "object"
+    },
+    "Symmetry": {
+      "additionalProperties": false,
+      "properties": {
+        "internal_action": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Internal Action",
+          "type": "array"
+        },
+        "lattice_action": {
+          "items": {
+            "items": {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            "maxItems": 5,
+            "minItems": 5,
+            "type": "array"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "Lattice Action",
+          "type": "array"
+        },
+        "order": {
+          "maximum": 360,
+          "minimum": 2,
+          "title": "Order",
+          "type": "integer"
+        },
+        "physical_action": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Physical Action",
+          "type": "array"
+        },
+        "source_locator": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "tolerance": {
+          "exclusiveMinimum": 0,
+          "title": "Tolerance",
+          "type": "number"
+        }
+      },
+      "required": [
+        "lattice_action",
+        "physical_action",
+        "internal_action",
+        "order",
+        "tolerance",
+        "source_locator"
+      ],
+      "title": "Symmetry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "arrays": {
+      "$ref": "#/$defs/AuthorityArrays"
+    },
+    "authority_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Authority Sha256",
+      "type": "string"
+    },
+    "convention": {
+      "$ref": "#/$defs/Convention"
+    },
+    "identity": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Identity",
+      "type": "string"
+    },
+    "kind": {
+      "const": "validated_track_a_finite_patch",
+      "title": "Kind",
+      "type": "string"
+    },
+    "label": {
+      "const": "REAL-MATERIAL DATASET",
+      "title": "Label",
+      "type": "string"
+    },
+    "normalized_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Normalized Sha256",
+      "type": "string"
+    },
+    "precision": {
+      "const": "float64",
+      "title": "Precision",
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "schema_version": {
+      "const": "xr-material-authority-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "scope": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Scope",
+      "type": "string"
+    },
+    "source_bundle": {
+      "$ref": "#/$defs/SourceBundle"
+    },
+    "validation_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Validation Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "label",
+    "kind",
+    "precision",
+    "provenance",
+    "source_bundle",
+    "authority_sha256",
+    "validation_sha256",
+    "normalized_sha256",
+    "identity",
+    "convention",
+    "scope",
+    "arrays"
+  ],
+  "title": "AuthorityMetadata",
+  "type": "object"
+}

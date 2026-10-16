@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qc5d"
+version = "0.1.0"
+description = "AperiTrace: event-resolved membership analysis and finite diffraction for cut-and-project models"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Myungin Lee", email = "myungin@umd.edu"}]
+license = "MIT"
+license-files = ["LICENSE", "Licence.txt"]
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.11,<2",
+    "pydantic>=2.7,<3",
+    "h5py>=3.10,<4",
+    "matplotlib>=3.8,<4",
+    "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+    "ruff>=0.6,<1",
+    "jsonschema>=4.23,<5",
+    "rfc3339-validator>=0.1.4,<1",
+    "setuptools>=68",
+    "wheel>=0.43",
+]
+
+[project.scripts]
+qc5d = "qc5d.cli:main"
+
+# PUBLIC_LINKS:BEGIN
+# [project.urls]
+# Repository = "<TODO>"
+# "Version 0.1.0" = "<TODO>"
+# Documentation = "<TODO>"
+# PUBLIC_LINKS:END
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

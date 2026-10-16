@@ -1,0 +1,42 @@
+#pragma kernel Classify
+#pragma kernel Compact
+struct Candidate {float4 physical;float2 uv;uint allowed;uint padding;};
+StructuredBuffer<Candidate> _Candidates;
+StructuredBuffer<float4> _Planes;
+StructuredBuffer<float2> _Window;
+RWStructuredBuffer<uint> _States;
+RWStructuredBuffer<uint> _Active;
+RWStructuredBuffer<uint> _Previous;
+AppendStructuredBuffer<uint> _PhysicalRows;
+AppendStructuredBuffer<uint> _InternalRows;
+int _Count,_EdgeCount,_Stride,_IncludeBoundary,_Context,_BoundaryPoints,_SelectedRow;
+float2 _Phi;
+float _Epsilon;
+[numthreads(64,1,1)]
+void Classify(uint3 id:SV_DispatchThreadID)
+{
+    uint row=id.x;if(row>=(uint)_Count) return;
+    float2 p=_Candidates[row].uv+_Phi;bool inside=true;float closest=3.402823466e+38;
+    for(int i=0;i<_EdgeCount;i++)
+    {
+        float3 h=_Planes[i].xyz;
+        inside=inside&&(dot(h.xy,p)+h.z<=0);
+        float2 a=_Window[i],b=_Window[i+1==_EdgeCount?0:i+1],d=b-a;
+        float t=saturate(dot(p-a,d)/dot(d,d));closest=min(closest,length(p-a-t*d));
+    }
+    // Half-space sign plus finite-segment Euclidean distance, including corners.
+    float signedDistance=inside?closest:-closest;
+    uint state=abs(signedDistance)<=_Epsilon?2:signedDistance>_Epsilon?1:0;
+    _Previous[row]=_Active[row];_States[row]=state;
+    _Active[row]=((state==1||(state==2&&_IncludeBoundary!=0))&&_Candidates[row].allowed!=0)?1:0;
+}
+[numthreads(64,1,1)]
+void Compact(uint3 id:SV_DispatchThreadID)
+{
+    uint row=id.x;if(row>=(uint)_Count) return;
+    bool swap=_SelectedRow>=0&&(uint)_SelectedRow%(uint)_Stride!=0;
+    if(swap&&row==0) return;
+    if(row%(uint)_Stride!=0&&(int)row!=_SelectedRow) return;
+    if((int)row==_SelectedRow||_Context!=0||_Active[row]!=0||_Previous[row]!=0||(_BoundaryPoints!=0&&_States[row]==2)) _PhysicalRows.Append(row);
+    _InternalRows.Append(row);
+}
