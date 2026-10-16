@@ -44,13 +44,14 @@ def validate_links(values):
     return values
 
 
-def replace_block(text, values):
+def replace_block(text, values, *, include_version=True):
     block = (
         BEGIN
         + "\n"
         + "\n".join(
-            f"- {label}: [{value}]({value})"
-            for label, value in zip(LABELS, (values[k] for k in KEYS), strict=True)
+            f"- {label}: [{values[key]}]({values[key]})"
+            for key, label in zip(KEYS, LABELS, strict=True)
+            if include_version or key != "version_url"
         )
         + "\n"
         + END
@@ -66,7 +67,9 @@ def build_plan(root, values):
     plan = {}
     for name in ("README.md", "RELEASE_NOTES.md"):
         path = root / name
-        plan[path] = replace_block(path.read_text(encoding="utf-8"), values)
+        plan[path] = replace_block(
+            path.read_text(encoding="utf-8"), values, include_version=name != "README.md"
+        )
     citation = root / "CITATION.cff"
     cff = citation.read_text(encoding="utf-8")
     for key, value in (

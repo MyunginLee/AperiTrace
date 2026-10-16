@@ -132,6 +132,9 @@ def test_metadata_update_does_not_create_manuscript_files():
         "CITATION.cff",
         "pyproject.toml",
     }
+    assert "- Version 0.1.0:" not in plan[ROOT / "README.md"]
+    assert "releases/tag/v0.1.0" not in plan[ROOT / "README.md"]
+    assert "releases/tag/v0.1.0" in plan[ROOT / "CITATION.cff"]
 
 
 def test_no_embedded_editorial_work_notes_or_private_paths():

@@ -114,11 +114,5 @@ Third-party licenses remain in force; see [notices](THIRD_PARTY_NOTICES.md).
 
 <!-- PUBLIC_LINKS:BEGIN -->
 - Repository: [MyunginLee/AperiTrace](https://github.com/MyunginLee/AperiTrace)
-- Version 0.1.0: [fixed source snapshot (709dc49)](https://github.com/MyunginLee/AperiTrace/tree/709dc49fe69b075a741caae57024fa2a89a8a9b8)
 - Documentation: [user and reproduction guides](https://github.com/MyunginLee/AperiTrace/tree/main/docs)
 <!-- PUBLIC_LINKS:END -->
-
-The version link pins the published 0.1.0 source snapshot; it is not a tagged
-GitHub Release. For later releases, update `PUBLIC_LINKS.json` and run
-`python scripts/apply_public_links.py --dry-run`, then
-`python scripts/apply_public_links.py` to synchronize the software metadata.
