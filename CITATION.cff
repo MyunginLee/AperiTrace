@@ -19,6 +19,6 @@ keywords:
   - quasicrystals
   - finite diffraction
   - scientific software
-# repository-code: "<TODO>"
-# repository-artifact: "<TODO>"
-# url: "<TODO>"
+repository-code: "https://github.com/MyunginLee/AperiTrace"
+repository-artifact: "https://github.com/MyunginLee/AperiTrace/tree/709dc49fe69b075a741caae57024fa2a89a8a9b8"
+url: "https://github.com/MyunginLee/AperiTrace/tree/main/docs"
